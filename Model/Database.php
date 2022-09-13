@@ -21,7 +21,7 @@ class Database
     {
         try {
             $statement   = $this->executeStatement($query, $params);
-            $result = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
+            $result      = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             $statement->close();
 
             return $result;
@@ -32,7 +32,7 @@ class Database
         return false;
     }
 
-    public function executeStatement($query = "", $params = []) 
+    private function executeStatement($query = "", $params = []) 
     {
         try {
             $statement   = $this->connection->prepare($query);
@@ -51,7 +51,5 @@ class Database
         } catch(Exception $e) {
             throw new Exception($e->getMessage());
         }
-
-        return false;
     }
 }
