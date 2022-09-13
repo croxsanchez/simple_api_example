@@ -3,6 +3,9 @@ Simple API REST example
 
 # Instructions
 
+- Create Database using create_database.sql script
+- Create a folder on localhost web server with all the file structure of this project
+
 In order to use this API you have to execute the following call
 // https://localhost/index.php/{MODULE_NAME}/{METHOD_NAME}?limit={LIMIT_VALUE}
 
@@ -38,3 +41,5 @@ Example output:
    }
 ]
 ```
+
+
